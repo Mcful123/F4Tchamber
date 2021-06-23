@@ -50,4 +50,4 @@ print(b)
 c.write_single_register(19168+((b[0]-1)*170), 63) # turn event 8 ON for last step
 # event 8 = 'turn chamber off after end of step'
 
-        
+# c.write_single_register(18492, 1782) #this will start profile 4
