@@ -101,3 +101,7 @@ def resume():
     # resume currently paused profile
     c.write_single_register(16564, 147)
         
+if(__name__ == "__main__"):
+    set_temps()
+    set_profile(0, 30, 4)
+    start_profile()
