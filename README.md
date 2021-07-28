@@ -16,7 +16,7 @@ This function is used to reconnect to the chamber if the host computer gets disc
 
 # set_profile(t_hr, t_min, profile)
 
-This function is what will actually make and send profile to the chamber. Profile takes an integer from 1 to 39: profile 40 is reserved for turning off the chamber using Python. The profile will be saved to this profile slot. <br />
+This function is what will actually make and send profiles to the chamber. 'profile' takes an integer from 1 to 39: profile 40 is reserved for turning off the chamber using Python. The profile will be saved to this profile slot. <br />
 t_hr and t_min takes integer from 0-999 and 0-59 respectively. This specifies the time spent soaking at each temperature. <br />
 The global variable temps should be filled with every temperature the chamber should soak at. This can be done manually or aided with the 'set_temps()' function.
 
@@ -30,7 +30,7 @@ This function starts the specified profile number (integer from 1 to 39).
 
 # terminate()
 
-This function will write a simple one step profile to profile #40. Then it will terminate any running profile, and start profile 40. Profile 40 will run its 1 second long profile and turn off the chamber after it is completed. 
+This function takes advantage of the fact the chamber can be turned off at the end of profiles. terminate() will write a simple one step profile to profile #40. Then it will terminate any running profile, and start profile 40. Profile 40 will run its 1 second long profile and turn off the chamber after it is completed. 
 
 # pause()
 pauses the currently running profile. It will do nothing if no profile is running.
